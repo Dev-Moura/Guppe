@@ -1,202 +1,214 @@
 """
-Lists
+Lista (List)
 
-Lists in Python function as vectors/matrices (arrays) in other languages, with the difference that they are dynamic
-and also that we can place ANY TYPE OF DATA.
+Listas em Python funcionam como vetores/matrizes (arrays) em outras linguagens, com a diferença de que são dinâmicas
+e também que podemos colocar QUALQUER TIPO DE DADO.
 
-C/Java languages: Arrays
-    - have a fixed size and data type;
-    that is, in these languages if you create an integer array with size 5, this array
-    will ALWAYS be of type integer and can ALWAYS have a maximum of 5 values.
+Linguagens C/Java: Matrizes
+    - ter tamanho e tipo de dados fixos;
+    isto é, nessas linguagens se você criar um array inteiro com tamanho 5, esse array
+    SEMPRE será do tipo inteiro e SEMPRE poderá ter no máximo 5 valores.
 
-- Dynamic: They do not have a fixed size: In other words, we can create the list and simply add elements:
-- Any data type: They do not have a fixed data type: In other words
+- Dinâmicos: Não possuem tamanho fixo: Ou seja, podemos criar a lista e simplesmente adicionar elementos:
+- Qualquer tipo de dados: Não possuem um tipo de dados fixo: Em outras palavras
 
-Lists in Python are represented by square brackets: []
+As listas em Python são representadas por colchetes: []
 
-# We can easily check if a certain value is contained in the list
+# Podemos verificar facilmente se um determinado valor está contido na lista
 num = 7
-if num in lista4:
-    print(f'I found the number {num}')
-else:
-    print(f'I didn't find the number {num}')
+for num in lista4:
+    print(f'Encontrei o número {num}')
+outro:
+    print(f'Não encontrei o número {num}')
 
-# We can easily sort a list
-list1.sort()
-print(list1)
+# Podemos classificar facilmente uma lista
 
-# We can easily count the number of occurrences of a value in a list
-print(list1.count(1))
-print(lista5.count('e'))
+lista1.sort()
+print(lista1)
 
-# Add elements to list
+# Podemos contar facilmente o número de ocorrências de um valor em uma lista
 
-To add elements or values to a list we use the append() function, it always adds to the end of the list
-NOTE: with append, we can only add 1 element at a time
+imprimir(lista1.contar(1))
+imprimir(lista5.count('e'))
 
-print(list1)
-list1.append(75)
-print(list1)
+#Adiciona elementos à lista
 
-# NOTE: With append, we can only add 1 element at a time
-# list1.append(12, 34, 56) # Error
+Para adicionar elementos ou valores a uma lista usamos a função append(), ela sempre adiciona no final da lista
+NOTA: com acréscimo, só podemos adicionar 1 elemento por vez
 
-list1.append([8, 3, 1])
-print(list1)
-if [8, 3, 1] in list1:
-    print('I found the list')
-else:
-    print('I didn't find the list')
+print(lista1)
+lista1.append(75)
+print(lista1)
 
-lista1.extend([123, 44, 67]) # Place each element in the list as an additional value to the list
-print(list1)
+# NOTA: Com acréscimo, só podemos adicionar 1 elemento por vez
+# list1.append(12, 34, 56) # Erro
 
-# We can insert a new element in the list by informing the index position
-list1.insert(2,'New value')
-print(list1)
+lista1.append([8, 3, 1])
+print(lista1)
+for [8, 3, 1] in lista1:
+    print('Encontrei a lista')
+outro:
+    print('Não encontrei a lista')
 
-# We can easily join two lists
+lista1.extend([123, 44, 67]) # Coloca cada elemento da lista como um valor adicional à lista
+print(lista1)
 
-list1 = list1 + list2
-# list1.extend(list2)
-print(list1)
+# Podemos inserir um novo elemento na lista informando a posição do índice
+list1.insert(2,'Novo valor')
+print(lista1)
 
-# We can reverse a list using reverse()
-list1.reverse()
-list2.reverse()
+# Podemos facilmente juntar duas listas
 
-print(list1)
-print(list2)
+lista1 = lista1 + lista2
+# lista1.extend(lista2)
+print(lista1)
 
-# Or we can also use this [::-1] -> slice
+# Podemos reverter uma lista usando reverse()
+lista1.reverso()
+lista2.reverso()
 
-print(list1[::-1])
-print(list2[::-1])
+print(lista1)
+print(lista2)
 
-# copy a list
+# Ou também podemos usar este [::-1] -> slice
 
-list6 = list2.copy()
-print(list6)
+print(lista1[::-1])
+print(lista2[::-1])
 
-# We can count how many elements we have in the list
+#copia uma lista
+
+lista6 = lista2.copy()
+print(lista6)
+
+# Podemos contar quantos elementos temos na lista
 print(len(lista1))
 
-# We can remove the last element from a list
-# NOTE: Pop not only removes the last element but also returns it
-print(list5)
-list5.pop()
-print(list5)
+# Podemos remover o último elemento de uma lista
+# NOTA: Pop não apenas remove o último elemento, mas também o retorna
+print(lista5)
+lista5.pop()
 
-# We can remove an element by index
-# NOTE: The elements to the right of this index will be moved to the left.
-# NOTE: If there is no element in the index entered, we will get the IndexError error.
+print(lista5)
 
-list5.pop(2)
-print(list5)
+# Podemos remover um elemento por índice
+# NOTA: Os elementos à direita deste índice serão movidos para a esquerda.
+# NOTA: Se não houver nenhum elemento inserido no índice, obteremos o erro IndexError.
 
-# We can remove all elements (zero the list)
-print(list5)
-list5.clear()
-print(list5)
+lista5.pop(2)
+print(lista5)
 
-# We can repeat elements in a list
-new = [1, 2, 3]
-print(new)
-new = new * 3
-print(new)
+# Podemos remover todos os elementos (zerar a lista)
 
-We can easily convert a string to a list
+print(lista5)
+lista5.clear()
 
-# Example 1
+print(lista5)
 
-course = 'Python Programming: Essential'
-print(course)
-course = course.split()
-print(course)
-# NOTE: By default, slipt separates list elements by the space between them.
+# Podemos repetir elementos de uma lista
 
-# Example 2
-course = 'Programming, in, Python, Essential'
-print(course)
-course = course.split(',')
-print(course)
+novo = [1, 2, 3]
+print(novo)
 
-# Converting a list to a string
+novo = novo * 3
+print(novo)
 
-list6 = ['Programming', 'em', 'Python', 'Essential']
-print(list6)
+Podemos facilmente converter uma string em uma lista
 
-# Below we are talking: Take the list6, put space between each element and transform it into a string
-course = ' '.join(lista6)
-print(course)
+# Exemplo 1
 
-# Below we are talking: Take the list6, put a dollar sign between each element and transform it into a string
-course = '$'.join(lista6)
-print(course)
+curso = 'Programação Python: Essencial'
+print(curso)
 
+curso = curso.split()
+print(curso)
 
-list6 = [1, 2.34, True, 'Geek', 'd', [1, 2 ,3], 45345345345]
-print(list6)
-print(type(list6))
+# NOTA: Por padrão, o slipt separa os elementos da lista pelo espaço entre eles.
 
-# Iterating over lists
+# Exemplo 2
 
-# Example 1
+course = 'Programação, em, Python, Essential'
+print(curso)
 
-sum = ''
-for element in list2:
-    print(element)
-    sum = sum + element
-print(sum)
+curso = curso.split(',')
+print(curso)
 
+# Convertendo uma lista em uma string
 
-# Example 2 - Using while
+list6 = ['Programação', 'em', 'Python', 'Essencial']
+print(lista6)
 
-cart = []
-product = ''
+# Abaixo estamos falando: Pegue a list6, coloque espaço entre cada elemento e transforme em uma string
 
-while product != 'exit':
-    print("adding a product to the list or type 'exit' to exit: ")
-    product = input()
-    if product != 'exit':
-        cart.append(product)
+curso = ' '.join(lista6)
+print(curso)
 
-for product in cart:
-    print(product)
+# Abaixo estamos falando: Pegue a list6, coloque um cifrão entre cada elemento e transforme em uma string
 
-# We access elements in an indexed way
+curso = '$'.join(lista6)
+print(curso)
 
-#           0         1         2       3
-color = ['Gree', 'Yellow', 'Blue', 'White']
+lista6 = [1, 2,34, Verdadeiro, 'Geek', 'd', [1, 2,3], 45345345345]
 
-print(color[0])  # Green
-print(color[1])  # Yellow
-print(color[2])  # Blue
-print(color[4])  # White
+print(lista6)
+print(tipo(lista6))
 
-# Access elements in reverse
-# To better understand the negative index, think of the list as a wheel
-# The end of an element is linked to the beginning of the list
+# Iterando listas
 
-print(color[-1])  # White
-print(color[-2])  # Blue
-print(color[-3])  # Yellow
-print(color[-4])  # Green
-print(color[-5])  # Error, because there is no index -5
+# Exemplo 1
 
-for color in colors:
-    print(color)
-index = 0
-while index < len(colors):
-    print(colors[index])
-    index = index + 1
-
-#  Generate index in for
-
-for index, color in enumerate(colors):
-    print(index, color)
+soma = ''
+for elemento in lista2:
+    print(elemento)
+    soma = soma + elemento
+print(soma)
 
 
+# Exemplo 2 - Usando while
+
+carrinho = []
+produto = ''
+
+while produto! = 'sair':
+    print("adicionando um produto à lista ou digite 'exit' para sair: ")
+    produto = entrada()
+    if produto! = 'sair':
+        carrinho.append(produto)
+
+for produto in carrinho:
+    print(produto)
+
+# Acessamos elementos de forma indexada
+
+# 0 1 2 3
+
+color = ['Verde', 'Amarelo', 'Azul', 'Branco']
+
+print(cor[0]) # Verde
+print(cor[1]) # Amarelo
+print(cor[2]) # Azul
+print(cor[4]) # Branco
+
+# Acessar elementos ao contrário
+# Para entender melhor o índice negativo, pense na lista como uma roda
+# O final de um elemento está vinculado ao início da lista
+
+print(cor[-1]) # Branco
+print(cor[-2]) # Azul
+print(cor[-3]) # Amarelo
+print(cor[-4]) # Verde
+print(cor[-5]) # Erro, porque não há índice -5
+
+para cores em cores:
+print(cor)
+índice = 0
+while índice < len(cores):
+    print(cores[índice])
+    índice = índice + 1
+
+# Gera índice em for
+
+para índice, cor em enumerar(cores):
+    imprimir(índice, cor)
 type([])
 
 list1 = [1, 99, 4, 27, 15, 22, 3, 1, 44, 42, 27]
@@ -227,17 +239,17 @@ print(list)
 # Encontrar o índice de um elemento na lista
 
 numeros = [5, 6, 7, 5, 8, 9, 10]
-#
-# # Em qual índice está o valor 6?
-#
-# print(numeros.index(6))
-#
-# # Em qual índice está o valor 9?
-#
-# print(numeros.index(9))
-#
-# # OBS: Caso não tenha esse elemento na lista, será aprensentado erro
-# # print(numeros.index(100))
+
+# Em qual índice está o valor 6?
+
+print(numeros.index(6))
+
+# Em qual índice está o valor 9?
+
+print(numeros.index(9))
+
+# OBS: Caso não tenha esse elemento na lista, será aprensentado erro
+# print(numeros.index(100))
 
 
 print(numeros.index(5)) #  OBS: Retornar índice do primeiro elemento encontrado
@@ -249,6 +261,7 @@ print(numeros.index(5,1))
 
 
 # Podemos fazer busca dentro de uma range, ou seja, qual indice começar a buscar, para procurar o valor 5
+
 print(numeros.index(5,1)) # buscando a partir do índice 1
 print(numeros.index(5,2)) # buscando a partir do índice 2
 print(numeros.index(5,3)) # buscando a partir do índice 3
